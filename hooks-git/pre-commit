@@ -1,0 +1,8 @@
+#!/usr/bin/php
+<?php
+$pathRootProject = __DIR__ . '/../';
+exec($pathRootProject . 'vendor/bin/php-cs-fixer fix', $output);
+foreach($output as $line) {
+    printf( $line . '\n' );
+}
+exit(0);
